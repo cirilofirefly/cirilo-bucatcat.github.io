@@ -27,48 +27,67 @@ main {
 }
 
 .nav-bar {
-    @apply fixed md:sticky top-0 w-full h-screen bg-zinc-50 flex flex-col
-        md:h-[5rem] md:flex-row md:items-center md:justify-evenly
+    @apply hidden md:sticky top-0 w-full bg-zinc-50 
+        md:h-[5rem] md:flex md:flex-row md:items-center md:justify-evenly
         dark:bg-slate-900;
 }
 
-.nav-bar ul {
+.m-nav-bar {
+    @apply fixed w-full h-screen bg-zinc-50 scale-0
+    dark:bg-slate-900;
+}
+
+.show-nav-toggle {
+    @apply scale-100;
+}
+
+.nav-bar ul,
+.m-nav-bar ul {
     @apply flex flex-col items-center justify-center md:flex-row md:order-2 w-full order-last col-span-3;
 }
 
-.nav-bar ul li {
-    @apply w-[8rem] text-center my-2 
+.nav-bar ul li,
+.m-nav-bar ul li {
+    @apply w-[10rem] md:w-[8rem] text-center my-3 
         md:mx-2 md:my-0;
 }
 
-.nav-bar ul li a {
-    @apply font-['Poppins'] text-slate-900 font-semibold text-[14px] transition-all duration-300 ease-in tracking-wide 
+.nav-bar ul li a,
+.m-nav-bar ul li a {
+    @apply font-['Poppins'] text-slate-900 font-semibold text-[1.2rem] md:text-[0.875rem] transition-all duration-300 ease-in tracking-wide 
         hover:font-bold hover:text-slate-600 hover:transition-all dark:text-zinc-50 dark:hover:text-slate-300;
 }
 
+.m-nav-toggles {
+    @apply fixed right-0 z-10 top-4 md:hidden;
+}
+
 .nav-toggles {
-    @apply flex justify-end items-center self-end mt-5 md:self-center  
+    @apply fixed md:relative flex justify-end items-center self-end mt-5 md:self-center z-10 right-0
         md:order-3 md:mr-[10rem] md:mt-0;
 }
 
-.nav-toggles .btn-nav-toggle {
+.nav-toggles .btn-nav-toggle,
+.m-nav-toggles .btn-nav-toggle {
     @apply inline-flex md:hidden items-center justify-center text-[1.5rem] w-[1.5rem] h-[1.5rem] text-slate-900 mr-[2rem]
         md:mr-0
         dark:text-zinc-50;
 }
 
-.nav-toggles .btn-theme {
-    @apply inline-flex items-center justify-center w-[2.5rem] h-[2.5rem] bg-gray-100 rounded-full mr-[1rem]
+.nav-toggles .btn-theme,
+.m-nav-toggles .btn-theme {
+    @apply inline-flex items-center justify-center w-[2.5rem] h-[2.5rem] bg-gray-100 rounded-full mr-[1rem] rotate-[-10deg]
         md:mr-0
         dark:bg-gray-800;
 }
 
-.btn-theme i {
-    @apply text-[1.3rem] text-gray-950 dark:text-zinc-50;
+.nav-toggles .btn-theme i,
+.m-nav-toggles .btn-theme i {
+    @apply text-[1.3rem] text-orange-300 dark:text-yellow-200 animate-theme-spin;
 }
 
 .logo {
-    @apply order-2 self-center text-center md:ml-[10rem] my-[2rem] md:my-0 animate-meow-spin;
+    @apply order-2 self-center text-center md:ml-[10rem] mt-[5rem] mb-[3rem] md:my-0 animate-meow-spin;
 }
 
 .logo a {

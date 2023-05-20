@@ -17,6 +17,7 @@ module.exports = {
         extend: {
             animation: {
                 'meow-spin': 'meow-spin 5s linear infinite',
+                'theme-spin': 'meow-spin 100ms linear forwards',
             },
             keyframes: {
                 'meow-spin': {

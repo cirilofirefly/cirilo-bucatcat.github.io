@@ -23,6 +23,24 @@
             <div class="banter-loader__box"></div>
         </div>
     </div>
+    <div class="m-nav-toggles">
+        <button class="btn-theme" onclick="toggleTheme()"></button>
+        <button class="btn-nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    <nav class="m-nav-bar">
+        <div class="logo">
+            <a href="/"><i class="fas fa-cat"></i></a>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#tools-and-skills">Tools and Skills</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
     <nav class="nav-bar">
         <div class="logo">
             <a href="/"><i class="fas fa-cat"></i></a>
@@ -35,11 +53,7 @@
             <li><a href="#contact">Contact Me</a></li>
         </ul>
         <div class="nav-toggles">
-            <button class="btn-theme" id="btnTheme"></button>
-            <button class="btn-nav-toggle">
-                <i role="button" class="fas fa-xmark"></i>
-                <!-- <i role="button" class="fas fa-bars"></i> -->
-            </button>
+            <button class="btn-theme" onclick="toggleTheme()"></button>
         </div>
     </nav>
     <main>

@@ -522,6 +522,20 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+@keyframes meow-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-theme-spin {
+  animation: meow-spin 100ms linear forwards;
+}
+
 :root {
   --radius: 35vmin;
   --frame-size: calc(var(--radius) / 3);
@@ -568,12 +582,9 @@ main {
 }
 
 .nav-bar {
-  position: fixed;
   top: 0px;
-  display: flex;
-  height: 100vh;
+  display: none;
   width: 100%;
-  flex-direction: column;
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 250 / var(--tw-bg-opacity));
 }
@@ -586,6 +597,7 @@ main {
 @media (min-width: 768px) {
   .nav-bar {
     position: sticky;
+    display: flex;
     height: 5rem;
     flex-direction: row;
     align-items: center;
@@ -593,7 +605,30 @@ main {
   }
 }
 
-.nav-bar ul {
+.m-nav-bar {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  --tw-scale-x: 0;
+  --tw-scale-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+}
+
+:is(.dark .m-nav-bar) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.show-nav-toggle {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.nav-bar ul,
+.m-nav-bar ul {
   order: 9999;
   grid-column: span 3 / span 3;
   display: flex;
@@ -604,31 +639,36 @@ main {
 }
 
 @media (min-width: 768px) {
-  .nav-bar ul {
+  .nav-bar ul,
+.m-nav-bar ul {
     order: 2;
     flex-direction: row;
   }
 }
 
-.nav-bar ul li {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  width: 8rem;
+.nav-bar ul li,
+.m-nav-bar ul li {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  width: 10rem;
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .nav-bar ul li {
+  .nav-bar ul li,
+.m-nav-bar ul li {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     margin-top: 0px;
     margin-bottom: 0px;
+    width: 8rem;
   }
 }
 
-.nav-bar ul li a {
+.nav-bar ul li a,
+.m-nav-bar ul li a {
   font-family: 'Poppins';
-  font-size: 14px;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.025em;
   --tw-text-opacity: 1;
@@ -639,7 +679,8 @@ main {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-.nav-bar ul li a:hover {
+.nav-bar ul li a:hover,
+.m-nav-bar ul li a:hover {
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(71 85 105 / var(--tw-text-opacity));
@@ -648,17 +689,42 @@ main {
   transition-duration: 150ms;
 }
 
-:is(.dark .nav-bar ul li a) {
+:is(.dark .nav-bar ul li a),:is(.dark 
+.m-nav-bar ul li a) {
   --tw-text-opacity: 1;
   color: rgb(250 250 250 / var(--tw-text-opacity));
 }
 
-:is(.dark .nav-bar ul li a:hover) {
+:is(.dark .nav-bar ul li a:hover),:is(.dark 
+.m-nav-bar ul li a:hover) {
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
+@media (min-width: 768px) {
+  .nav-bar ul li a,
+.m-nav-bar ul li a {
+    font-size: 0.875rem;
+  }
+}
+
+.m-nav-toggles {
+  position: fixed;
+  right: 0px;
+  top: 1rem;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .m-nav-toggles {
+    display: none;
+  }
+}
+
 .nav-toggles {
+  position: fixed;
+  right: 0px;
+  z-index: 10;
   margin-top: 1.25rem;
   display: flex;
   align-items: center;
@@ -668,6 +734,7 @@ main {
 
 @media (min-width: 768px) {
   .nav-toggles {
+    position: relative;
     order: 3;
     margin-right: 10rem;
     margin-top: 0px;
@@ -675,7 +742,8 @@ main {
   }
 }
 
-.nav-toggles .btn-nav-toggle {
+.nav-toggles .btn-nav-toggle,
+.m-nav-toggles .btn-nav-toggle {
   margin-right: 2rem;
   display: inline-flex;
   height: 1.5rem;
@@ -687,23 +755,28 @@ main {
   color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
-:is(.dark .nav-toggles .btn-nav-toggle) {
+:is(.dark .nav-toggles .btn-nav-toggle),:is(.dark 
+.m-nav-toggles .btn-nav-toggle) {
   --tw-text-opacity: 1;
   color: rgb(250 250 250 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
-  .nav-toggles .btn-nav-toggle {
+  .nav-toggles .btn-nav-toggle,
+.m-nav-toggles .btn-nav-toggle {
     margin-right: 0px;
     display: none;
   }
 }
 
-.nav-toggles .btn-theme {
+.nav-toggles .btn-theme,
+.m-nav-toggles .btn-theme {
   margin-right: 1rem;
   display: inline-flex;
   height: 2.5rem;
   width: 2.5rem;
+  --tw-rotate: -10deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
@@ -711,32 +784,47 @@ main {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-:is(.dark .nav-toggles .btn-theme) {
+:is(.dark .nav-toggles .btn-theme),:is(.dark 
+.m-nav-toggles .btn-theme) {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
-  .nav-toggles .btn-theme {
+  .nav-toggles .btn-theme,
+.m-nav-toggles .btn-theme {
     margin-right: 0px;
   }
 }
 
-.btn-theme i {
-  font-size: 1.3rem;
-  --tw-text-opacity: 1;
-  color: rgb(3 7 18 / var(--tw-text-opacity));
+@keyframes meow-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-:is(.dark .btn-theme i) {
+.nav-toggles .btn-theme i,
+.m-nav-toggles .btn-theme i {
+  animation: meow-spin 100ms linear forwards;
+  font-size: 1.3rem;
   --tw-text-opacity: 1;
-  color: rgb(250 250 250 / var(--tw-text-opacity));
+  color: rgb(253 186 116 / var(--tw-text-opacity));
+}
+
+:is(.dark .nav-toggles .btn-theme i),:is(.dark 
+.m-nav-toggles .btn-theme i) {
+  --tw-text-opacity: 1;
+  color: rgb(254 240 138 / var(--tw-text-opacity));
 }
 
 .logo {
   order: 2;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 
 @keyframes meow-spin {
