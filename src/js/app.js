@@ -24,7 +24,7 @@ function getThemeMode() {
 
 function toggleTheme() {
     btnTheme.innerHTML = '';
-    let isDarkMode = localStorage.theme == 'dark'
+    let isDarkMode = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
     if(isDarkMode) {
         localStorage.setItem('theme', 'light');
         btnTheme.innerHTML += getThemeIcon('sun');

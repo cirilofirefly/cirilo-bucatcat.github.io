@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--radius: 35vmin;
+	--frame-size: calc(var(--radius) / 3);
+	--d-outer: calc(var(--radius) * 2);
+	--d-inner: calc(var(--d-outer) - var(--frame-size));
+	--font-size: calc(var(--radius) / 10);
+}
+
 body {
     font-family: 'Open Sans', sans-serif, Arial;
 }
@@ -19,18 +27,18 @@ main {
 }
 
 .nav-bar {
-    @apply sticky top-0 w-full h-screen bg-zinc-50 flex flex-col items-center justify-evenly 
-        sm:h-[5rem] sm:flex-row
+    @apply fixed md:sticky top-0 w-full h-screen bg-zinc-50 flex flex-col
+        md:h-[5rem] md:flex-row md:items-center md:justify-evenly
         dark:bg-slate-900;
 }
 
 .nav-bar ul {
-    @apply flex flex-col sm:flex-row order-2 md:order-3;
+    @apply flex flex-col items-center justify-center md:flex-row md:order-2 w-full order-last col-span-3;
 }
 
 .nav-bar ul li {
     @apply w-[8rem] text-center my-2 
-        sm:mx-2 sm:my-0;
+        md:mx-2 md:my-0;
 }
 
 .nav-bar ul li a {
@@ -38,26 +46,33 @@ main {
         hover:font-bold hover:text-slate-600 hover:transition-all dark:text-zinc-50 dark:hover:text-slate-300;
 }
 
-.nav-toggle {
-    @apply flex text-center justify-center items-center md:invisible;
+.nav-toggles {
+    @apply flex justify-end items-center self-end mt-5 md:self-center  
+        md:order-3 md:mr-[10rem] md:mt-0;
 }
 
-.nav-toggle i {
-    @apply text-[1.5rem] w-[1.5rem] h-[1.5rem] text-slate-900 dark:text-zinc-50;
+.nav-toggles .btn-nav-toggle {
+    @apply inline-flex md:hidden items-center justify-center text-[1.5rem] w-[1.5rem] h-[1.5rem] text-slate-900 mr-[2rem]
+        md:mr-0
+        dark:text-zinc-50;
 }
 
-.btn-theme {
-    @apply inline-flex items-center justify-center w-[3rem] h-[3rem] bg-gray-100 rounded-full 
-        dark:bg-gray-800
-        md:order-3;
+.nav-toggles .btn-theme {
+    @apply inline-flex items-center justify-center w-[2.5rem] h-[2.5rem] bg-gray-100 rounded-full mr-[1rem]
+        md:mr-0
+        dark:bg-gray-800;
 }
 
 .btn-theme i {
-    @apply text-[1.5rem] text-gray-950 dark:text-zinc-50;
+    @apply text-[1.3rem] text-gray-950 dark:text-zinc-50;
+}
+
+.logo {
+    @apply order-2 self-center text-center md:ml-[10rem] my-[2rem] md:my-0 animate-meow-spin;
 }
 
 .logo a {
-    @apply text-[2rem] text-slate-900 dark:text-zinc-50;
+    @apply text-[3rem] md:text-[2rem] text-slate-900 dark:text-zinc-50;
 }
 
 .content {

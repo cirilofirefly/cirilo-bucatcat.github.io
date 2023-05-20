@@ -4,6 +4,7 @@ module.exports = {
     content: [
         './src/**/*.html',
         './src/**/*.js',
+        './index.html',
     ],
     theme: {
         screens: {
@@ -13,7 +14,17 @@ module.exports = {
             'xl': '1280px',
             '2xl': '1536px'
         },
-        extend: {},
+        extend: {
+            animation: {
+                'meow-spin': 'meow-spin 5s linear infinite',
+            },
+            keyframes: {
+                'meow-spin': {
+                    '0%': { transform: 'rotate(0deg)' },
+                    '100%': { transform: 'rotate(360deg)' },
+                }
+              }
+        },
     },
     plugins: [],
 }
