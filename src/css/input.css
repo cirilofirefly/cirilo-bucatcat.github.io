@@ -2,13 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    font-family: 'Open Sans', sans-serif, Arial;
+}
 
 .loader {
-    @apply fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center;
+    @apply fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-10 dark:bg-gray-950;
 }
 
 .loaded {
     animation: loaded-anim 300ms forwards ease-in;
+}
+
+main {
+    @apply bg-white dark:bg-black;
+}
+
+.nav-bar {
+    @apply sticky top-0 w-full h-[5rem] bg-white flex items-center justify-center
+        dark:bg-gray-950;
+}
+
+.nav-bar ul {
+    @apply flex;
+}
+
+.nav-bar ul li {
+    @apply w-[8rem] text-center text-gray-800 font-semibold text-[18px] transition-all duration-300 ease-in 
+        hover:text-gray-400;
+}
+
+.content {
+    @apply w-full h-[500px] mt-[5rem];
 }
 
 .banter-loader {

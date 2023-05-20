@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
     <script src="./src/js/app.js" defer></script>
 </head>
 <body>
-    <div class="loader dark:bg-gray-950">
+    <div class="loader">
         <div class="banter-loader">
             <div class="banter-loader__box"></div>
             <div class="banter-loader__box"></div>
@@ -22,8 +22,31 @@
             <div class="banter-loader__box"></div>
         </div>
     </div>
-    <main class="bg-white dark:bg-black">
-        <h1 class="text-blue-500">This site is working.</h1>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#techstacks">Tech Stacks</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="content" id="home">
+            Home
+        </section>
+        <section class="content" id="projects">
+            Projects
+        </section>
+        <section class="content" id="techstacks">
+            Tech Stacks
+        </section>
+        <section class="content" id="about">
+            About
+        </section>
+        <section class="content" id="contact">
+            Contact Me
+        </section>
     </main>
 </body>
 </html>

@@ -1,7 +1,7 @@
 
 window.addEventListener('load', function() {
     getThemeMode();
-    loaded();
+    setTimeout(() => loaded(), 1000);
 });
 
 function loaded() {
