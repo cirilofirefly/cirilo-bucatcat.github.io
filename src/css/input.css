@@ -7,7 +7,7 @@ body {
 }
 
 .loader {
-    @apply fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-10 dark:bg-gray-950;
+    @apply fixed top-0 left-0 w-full h-full bg-zinc-50 flex items-center justify-center z-10 dark:bg-gray-950;
 }
 
 .loaded {
@@ -15,12 +15,12 @@ body {
 }
 
 main {
-    @apply bg-white dark:bg-black;
+    @apply bg-zinc-50 dark:bg-slate-900;
 }
 
 .nav-bar {
-    @apply sticky top-0 w-full h-[5rem] bg-white flex items-center justify-center
-        dark:bg-gray-950;
+    @apply sticky top-0 w-full h-[5rem] bg-zinc-50 flex items-center justify-evenly
+        dark:bg-slate-900;
 }
 
 .nav-bar ul {
@@ -28,12 +28,29 @@ main {
 }
 
 .nav-bar ul li {
-    @apply w-[8rem] text-center text-gray-800 font-semibold text-[18px] transition-all duration-300 ease-in 
-        hover:text-gray-400;
+    @apply w-[8rem] text-center mx-2;
+}
+
+.nav-bar ul li a {
+    @apply font-['Poppins'] text-slate-900 font-semibold text-[14px] transition-all duration-300 ease-in tracking-wide
+        hover:font-bold hover:text-slate-600 hover:transition-all
+        dark:text-zinc-50 dark:hover:text-slate-300;
+}
+
+.btn-theme {
+    @apply inline-flex items-center justify-center w-[3rem] h-[3rem] bg-gray-100 rounded-full
+        dark:bg-gray-800;
+}
+.btn-theme i {
+    @apply text-[1.5rem] text-gray-950 dark:text-zinc-50;
+}
+
+.logo a {
+    @apply text-[2rem] text-slate-900 dark:text-zinc-50;
 }
 
 .content {
-    @apply w-full h-[500px] mt-[5rem];
+    @apply w-full h-[500px];
 }
 
 .banter-loader {
@@ -57,7 +74,7 @@ main {
 .banter-loader__box:before {
     content: "";
     background: rebeccapurple;
-    @apply absolute left-0 top-0 w-full h-full bg-gray-950 dark:bg-white;
+    @apply absolute left-0 top-0 w-full h-full bg-slate-900 dark:bg-zinc-50;
 }
 
 .banter-loader__box:nth-child(3n) {
