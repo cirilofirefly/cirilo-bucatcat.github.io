@@ -582,6 +582,7 @@ main {
 }
 
 .nav-bar {
+  position: relative;
   top: 0px;
   display: none;
   width: 100%;
@@ -596,13 +597,16 @@ main {
 
 @media (min-width: 768px) {
   .nav-bar {
-    position: sticky;
     display: flex;
     height: 5rem;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
   }
+}
+
+.nav-sticky {
+  position: sticky;
 }
 
 .m-nav-bar {
@@ -662,12 +666,14 @@ main {
     margin-top: 0px;
     margin-bottom: 0px;
     width: 8rem;
+    text-align: center;
   }
 }
 
 .nav-bar ul li a,
 .m-nav-bar ul li a {
   margin-right: 5rem;
+  cursor: pointer;
   font-family: 'Poppins';
   font-size: 1.5rem;
   font-weight: 600;

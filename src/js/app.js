@@ -5,10 +5,22 @@ const mobileNavbar = document.querySelector('.m-nav-bar');
 let navTimeline = gsap.timeline({ease: 'Slowmo.easeOut', duration: 1});
 
 btnNavToggle.addEventListener('click', toggleNav);
+
 window.addEventListener('load', function() {
     getThemeMode();
     setTimeout(() => loaded(), 1000);
 });
+
+window.addEventListener('scroll', throttle(function() { stickyNav(); }, 1000));
+
+function stickyNav() {
+    let navbar = document.querySelector('.nav-bar');
+    navbar.classList.toggle('nav-sticky', window.scrollY > 0);
+}
+
+function toTopPage() {
+    window.scrollTo(0, 0);
+}
 
 function toggleNav() {
     mobileNavbar.classList.toggle('show-nav-toggle');
@@ -79,4 +91,20 @@ function getThemeIcon(icon) {
 
 function getToggleIcon(icon) {
     return '<i class="fas fa-' + icon + '"></i>';
+}
+
+function throttle(cb, delay) {
+    let wait = false;
+
+    return (...args) => {
+        if (wait) {
+            return;
+        }
+
+        cb(...args);
+        wait = true;
+        setTimeout(() => {
+            wait = false;
+        }, delay);
+    }
 }

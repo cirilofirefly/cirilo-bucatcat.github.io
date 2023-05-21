@@ -27,9 +27,13 @@ main {
 }
 
 .nav-bar {
-    @apply hidden md:sticky top-0 w-full bg-zinc-50 
+    @apply hidden relative top-0 w-full bg-zinc-50 
         md:h-[5rem] md:flex md:flex-row md:items-center md:justify-evenly
         dark:bg-slate-900;
+}
+
+.nav-sticky {
+    @apply sticky;
 }
 
 .m-nav-bar {
@@ -49,7 +53,7 @@ main {
 .nav-bar ul li,
 .m-nav-bar ul li {
     @apply w-full md:w-[8rem] text-end my-3 
-        md:mx-2 md:my-0;
+        md:mx-2 md:my-0 md:text-center;
 }
 
 .nav-bar ul li a,
@@ -58,7 +62,7 @@ main {
         md:text-[0.875rem] md:mr-0
         sm:mr-[10rem] sm:text-[2rem]
         hover:font-bold hover:text-slate-600 hover:transition-all 
-        dark:text-zinc-50 dark:hover:text-slate-300;
+        dark:text-zinc-50 dark:hover:text-slate-300 cursor-pointer;
 }
 
 .m-nav-toggles {
