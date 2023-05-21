@@ -2,9 +2,9 @@
 const btnThemes = document.querySelectorAll('.btn-theme');
 const btnNavToggle = document.querySelector('.btn-nav-toggle');
 const mobileNavbar = document.querySelector('.m-nav-bar');
+let timeline = gsap.timeline({ease: 'bounce', duration: 0.3});
+
 btnNavToggle.addEventListener('click', toggleNav);
-
-
 window.addEventListener('load', function() {
     getThemeMode();
     setTimeout(() => loaded(), 1000);
@@ -12,19 +12,29 @@ window.addEventListener('load', function() {
 
 function toggleNav() {
     mobileNavbar.classList.toggle('show-nav-toggle');
-
     let showToggle = mobileNavbar.classList.contains('show-nav-toggle');
-    btnNavToggle.innerHTML = '';
+    let icon = showToggle ? 'xmark' : 'bars';
+
+    btnNavToggle.innerHTML = getToggleIcon(icon);
+    btnNavToggle.classList.add('animate-theme-spin');
     
     if(showToggle) {
-        btnNavToggle.innerHTML += getToggleIcon('xmark');
+        if(timeline.reversed()) {
+            timeline.play();
+        } else {
+            timeline
+                .from('.m-nav-bar', { x: -100, opacity: 0 })
+                .to('.m-nav-bar', { x: 0, opacity: 1 })
+                .from('#nav-item', { y: -100, opacity: 0, stagger: 0.5 })
+                .to('#nav-item', { y: 0, opacity: 1 });
+        }
     } else {
-        mobileNavbar.classList.remove('show-nav-toggle');
-        btnNavToggle.innerHTML += getToggleIcon('bars');
-    }
-
-    btnNavToggle.classList.add('animate-theme-spin');
-    setTimeout(() => btnNavToggle.classList.remove('animate-theme-spin'), 1000);
+        timeline.reverse();
+    } 
+    
+    setTimeout(() => {
+        btnNavToggle.classList.remove('animate-theme-spin'); 
+    }, 1000);
 }
 
 function loaded() {
