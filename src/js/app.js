@@ -2,7 +2,7 @@
 const btnThemes = document.querySelectorAll('.btn-theme');
 const btnNavToggle = document.querySelector('.btn-nav-toggle');
 const mobileNavbar = document.querySelector('.m-nav-bar');
-let timeline = gsap.timeline({ease: 'bounce', duration: 0.3});
+let navTimeline = gsap.timeline({ease: 'Slowmo.easeOut', duration: 1});
 
 btnNavToggle.addEventListener('click', toggleNav);
 window.addEventListener('load', function() {
@@ -14,24 +14,23 @@ function toggleNav() {
     mobileNavbar.classList.toggle('show-nav-toggle');
     let showToggle = mobileNavbar.classList.contains('show-nav-toggle');
     let icon = showToggle ? 'xmark' : 'bars';
-
-    btnNavToggle.innerHTML = getToggleIcon(icon);
-    btnNavToggle.classList.add('animate-theme-spin');
     
     if(showToggle) {
-        if(timeline.reversed()) {
-            timeline.play();
+        if(navTimeline.reversed()) {
+            navTimeline.play();
         } else {
-            timeline
+            navTimeline
                 .from('.m-nav-bar', { x: -100, opacity: 0 })
                 .to('.m-nav-bar', { x: 0, opacity: 1 })
                 .from('#nav-item', { y: -100, opacity: 0, stagger: 0.5 })
                 .to('#nav-item', { y: 0, opacity: 1 });
         }
     } else {
-        timeline.reverse();
+        navTimeline.reverse();
     } 
     
+    btnNavToggle.innerHTML = getToggleIcon(icon);
+    btnNavToggle.classList.add('animate-theme-spin');
     setTimeout(() => {
         btnNavToggle.classList.remove('animate-theme-spin'); 
     }, 1000);
