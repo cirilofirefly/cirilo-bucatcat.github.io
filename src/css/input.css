@@ -10,6 +10,14 @@
 	--font-size: calc(var(--radius) / 10);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.dark {
+    @apply text-zinc-50;
+}
+
 body {
     font-family: 'Open Sans', sans-serif, Arial;
 }
@@ -27,13 +35,18 @@ main {
 }
 
 .nav-bar {
-    @apply hidden relative top-0 w-full bg-zinc-50 
+    @apply hidden relative w-full bg-zinc-50 
         md:h-[5rem] md:flex md:flex-row md:items-center md:justify-evenly
         dark:bg-slate-900;
 }
 
+.text-1 {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+}
+
 .nav-sticky {
-    @apply sticky;
+    @apply sticky top-0 shadow;
 }
 
 .m-nav-bar {
@@ -102,7 +115,24 @@ main {
 }
 
 .content {
-    @apply w-full h-[500px];
+    @apply w-full;
+}
+
+.hero {
+    @apply relative flex items-center justify-center w-full h-screen 
+        md:h-[calc(100vh-5rem)]
+    ;
+}
+.iam {
+    @apply text-zinc-50 text-2xl uppercase dark:text-slate-950;
+}
+
+.ic-download {
+    @apply w-[30px] h-[30px] inline-flex mr-3 items-center rounded-full justify-center border border-slate-900 dark:border-zinc-50;
+}
+
+.ic-download i {
+    @apply text-slate-950 dark:text-zinc-50;
 }
 
 .banter-loader {
