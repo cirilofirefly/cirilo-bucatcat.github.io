@@ -23,7 +23,7 @@ body {
 }
 
 .loader {
-    @apply fixed top-0 left-0 w-full h-full bg-zinc-50 flex items-center justify-center dark:bg-slate-900 z-20;
+    @apply fixed top-0 left-0 w-full h-full bg-zinc-50 flex items-center justify-center dark:bg-slate-900 z-30;
 }
 
 .loaded {
@@ -40,9 +40,10 @@ main {
         dark:bg-slate-900;
 }
 
-.text-1 {
+.cat-is-spinning {
     writing-mode: tb-rl;
     transform: rotate(-180deg);
+    @apply text-[12px] md:text-[14px] my-2;
 }
 
 .nav-sticky {
@@ -50,12 +51,12 @@ main {
 }
 
 .m-nav-bar {
-    @apply fixed w-full h-screen bg-zinc-50 scale-0
-    dark:bg-slate-900;
+    @apply fixed w-full h-screen bg-zinc-50 z-10 left-[-2000px]
+        dark:bg-slate-900;
 }
 
 .show-nav-toggle {
-    @apply scale-100;
+    @apply left-0;
 }
 
 .nav-bar ul,
@@ -79,11 +80,11 @@ main {
 }
 
 .m-nav-toggles {
-    @apply fixed right-0 top-4 md:hidden z-10;
+    @apply fixed right-0 top-4 md:hidden z-20;
 }
 
 .nav-toggles {
-    @apply fixed md:relative flex justify-end items-center self-end mt-5 md:self-center z-10 right-0
+    @apply fixed md:relative flex justify-end items-center self-end mt-5 md:self-center z-20 right-0
         md:order-3 md:mr-[10rem] md:mt-0;
 }
 

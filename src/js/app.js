@@ -109,24 +109,55 @@ function toTopPage() {
 }
 
 function toggleNav() {
-    mobileNavbar.classList.toggle('show-nav-toggle');
-    let showToggle = mobileNavbar.classList.contains('show-nav-toggle');
-    let icon = showToggle ? 'xmark' : 'bars';
+    // mobileNavbar.classList.toggle('show-nav-toggle');
+    // let showToggle = mobileNavbar.classList.contains('show-nav-toggle');
+    // let icon = showToggle ? 'xmark' : 'bars';
     
-    if(showToggle) {
+    // if(showToggle) {
+    //     if(navTimeline.reversed()) {
+    //         navTimeline.play();
+    //     } else {
+    //         navTimeline
+    //             .from('.m-nav-bar', { duration: 0.3, x: -100, opacity: 0 })
+    //             .to('.m-nav-bar', { duration: 0.3, x: 0, opacity: 1 })
+    //             .from('#nav-item', { duration: 0.3, y: -100, opacity: 0, stagger: 0.5 })
+    //             .to('#nav-item', { duration: 0.3, y: 0, opacity: 1 });
+    //     }
+    // } else {
+    //     navTimeline.reverse();
+    // } 
+    
+    // btnNavToggle.innerHTML = getToggleIcon(icon);
+    // btnNavToggle.classList.add('animate-theme-spin');
+    // setTimeout(() => {
+    //     btnNavToggle.classList.remove('animate-theme-spin'); 
+    // }, 1000);
+
+    let hasToggle = mobileNavbar.classList.contains('show-nav-toggle');
+    let icon = '';
+    if(hasToggle) {
+
+        navTimeline.reverse();
+        icon = 'bars';
+        setTimeout(() => mobileNavbar.classList.remove('show-nav-toggle'), 3000)
+
+    } else {
+
+        mobileNavbar.classList.add('show-nav-toggle');
+        
         if(navTimeline.reversed()) {
+            icon = 'xmark';
             navTimeline.play();
         } else {
+            icon = 'xmark';
             navTimeline
                 .from('.m-nav-bar', { duration: 0.3, x: -100, opacity: 0 })
                 .to('.m-nav-bar', { duration: 0.3, x: 0, opacity: 1 })
                 .from('#nav-item', { duration: 0.3, y: -100, opacity: 0, stagger: 0.5 })
                 .to('#nav-item', { duration: 0.3, y: 0, opacity: 1 });
         }
-    } else {
-        navTimeline.reverse();
-    } 
-    
+    }
+
     btnNavToggle.innerHTML = getToggleIcon(icon);
     btnNavToggle.classList.add('animate-theme-spin');
     setTimeout(() => {
