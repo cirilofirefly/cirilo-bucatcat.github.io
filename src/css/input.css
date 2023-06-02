@@ -47,7 +47,7 @@ main {
 }
 
 .nav-sticky {
-    @apply sticky top-0 shadow;
+    @apply sticky top-0 z-20;
 }
 
 .m-nav-bar {

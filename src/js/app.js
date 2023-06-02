@@ -2,12 +2,40 @@
 const btnThemes = document.querySelectorAll('.btn-theme');
 const btnNavToggle = document.querySelector('.btn-nav-toggle');
 const mobileNavbar = document.querySelector('.m-nav-bar');
+
+
+gsap.from('#tas-content', { x: 500, opacity: 0, duration: 1 })
+gsap.to('#tas-content', {
+    scrollTrigger: {
+        trigger: '#tas-content',
+        scrub: true,
+        end: '0px',
+        toggleActions: 'play none none none'
+    },
+    x: 0,
+    opacity: 1,
+    duration: 1
+})
+gsap.from('#tas-description', { x: '-100', opacity: 0, duration: 1 });
+gsap.to('#tas-description', {
+    scrollTrigger: {
+        trigger: '#tas-description',
+        end: '100px',
+        scrub: true,
+        toggleActions: 'play none none none'
+    },
+    x: 0,
+    opacity: 1,
+    duration: 1
+})
+
+
 let navTimeline = gsap.timeline({defaults: {ease: 'circ.out' }});
+
 btnNavToggle.addEventListener('click', toggleNav);
 
 window.addEventListener('load', function() {
     getThemeMode();
-    
     setTimeout(() =>  {
         loaded();
         animateHeroContent();
@@ -76,7 +104,7 @@ function animateIAMText() {
         text: {
             duration: 5,
             delay: 2,
-            value: 'Full Stack Developer',
+            value: 'Web Developer',
             delimiter: ''
         }
     })
