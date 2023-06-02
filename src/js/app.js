@@ -8,8 +8,7 @@ gsap.from('#tas-content', { x: 500, opacity: 0, duration: 1 })
 gsap.to('#tas-content', {
     scrollTrigger: {
         trigger: '#tas-content',
-        scrub: true,
-        end: '0px',
+        end: '100px',
         toggleActions: 'play none none none'
     },
     x: 0,
@@ -21,7 +20,6 @@ gsap.to('#tas-description', {
     scrollTrigger: {
         trigger: '#tas-description',
         end: '100px',
-        scrub: true,
         toggleActions: 'play none none none'
     },
     x: 0,

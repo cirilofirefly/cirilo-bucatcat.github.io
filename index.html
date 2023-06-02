@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cirilo Bucatcat Jr.</title>
+    <title>Cirilo Bucatcat</title>
     <link rel="stylesheet" href="./dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -63,7 +63,9 @@
                 <div class="w-[90%] md:w-2/3 h-1/2 flex flex-col items-center justify-center md:inline-block">
                     <h2 id="hero-name" class="text-xl md:text-2xl">
                         I am 
-                        <span class="text-[2.5rem] md:text-[5rem] font-bold"><br class="flex md:hidden"> Cirilo E. Bucatcat Jr.</span>
+                        <span class="text-[2.5rem] md:text-[5rem] font-bold uppercase"><br class="flex md:hidden">
+                            Cirilo Bucatcat
+                        </span>
                     </h2>
                     <div id="hero-iam" class="flex items-end my-4">
                         <p id="iam" class="text-3xl">a</p>
@@ -84,11 +86,77 @@
             </div>
         </section>
         <section class="content" id="projects">
-            <h1>Projects</h1>
-            <p>These are my created projects</p>
+            <div class="flex flex-col justify-center items-center overflow-hidden mb-[2rem]">
+                <div id="project-description" class="w-full flex flex-col items-center justify-center mb-[3rem]">
+                    <h1 class="text-[2rem] font-bold">Projects</h1>
+                    <p class="text-slate-500">These are my created projects</p>
+                </div>
+                <div id="project-content" class="w-3/4 grid grid-cols-1 place-items-center sm:grid-cols-1 md:grid-cols-3 gap-4 mb-[5rem]">
+                    <div class="max-w-sm h-full rounded overflow-hidden shadow bg-zinc-50 dark:bg-slate-700">
+                        <img class="w-full" src="https://v1.tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
+                        <div class="px-6 py-4">
+                          <div class="font-bold text-xl mb-2">Voting System</div>
+                          <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaer qweqwe
+                          </p>
+                        </div>
+                        <div class="px-6 pt-[1rem] pb-4">
+                            <a class="inline-flex items-center justify-center border border-slate-900 rounded-full px-3 py-1 group hover:bg-slate-900 group" href="">
+                                <img class="object-cover h-[1rem] grayscale group-hover:grayscale-0" src="/src/assets/icons/bitbucket.svg" alt="link-bitbucket"> 
+                                <p class="ml-1 text-[14px] lowercase group-hover:text-zinc-50">Bitbucket</p>
+                            </a>
+                        </div>  
+                    </div>
+                    <div class="max-w-sm rounded overflow-hidden shadow">
+                        <img class="w-full" src="https://v1.tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
+                        <div class="px-6 py-4">
+                          <div class="font-bold text-xl mb-2">LNU Internship</div>
+                          <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                          </p>
+                        </div>
+                        <div class="px-6 pt-[1rem] pb-4">
+                            <a class="inline-flex items-center justify-center border border-slate-900 rounded-full px-3 py-1 group hover:bg-slate-900 group" href="">
+                                <img class="object-cover h-[1rem] grayscale group-hover:grayscale-0" src="/src/assets/icons/bitbucket.svg" alt="link-bitbucket"> 
+                                <p class="ml-1 text-[14px] lowercase group-hover:text-zinc-50">Bitbucket</p>
+                            </a>
+                        </div>  
+                    </div>
+                    <div class="max-w-sm rounded overflow-hidden shadow">
+                        <img class="w-full" src="https://v1.tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
+                        <div class="px-6 py-4">
+                          <div class="font-bold text-xl mb-2">Messenger Clone</div>
+                          <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                          </p>
+                        </div>
+                        <div class="px-6 pt-[1rem] pb-4">
+                            <a class="inline-flex items-center justify-center border border-slate-900 rounded-full px-3 py-1 group hover:bg-slate-900 group" href="">
+                                <img class="object-cover h-[1rem] grayscale group-hover:grayscale-0" src="/src/assets/icons/github.svg" alt="link-github"> 
+                                <p class="ml-1 text-[14px] lowercase group-hover:text-zinc-50">github</p>
+                            </a>
+                        </div>  
+                    </div>
+                    <div class="max-w-sm rounded overflow-hidden shadow">
+                        <img class="w-full" src="https://v1.tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains">
+                        <div class="px-6 py-4">
+                          <div class="font-bold text-xl mb-2">Messenger Clone</div>
+                          <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                          </p>
+                        </div>
+                        <div class="px-6 pt-[1rem] pb-4">
+                            <a class="inline-flex items-center justify-center border border-slate-900 rounded-full px-3 py-1 group hover:bg-slate-900 group" href="">
+                                <img class="object-cover h-[1rem] grayscale group-hover:grayscale-0" src="/src/assets/icons/github.svg" alt="link-github"> 
+                                <p class="ml-1 text-[14px] lowercase group-hover:text-zinc-50">github</p>
+                            </a>
+                        </div>  
+                    </div>
+                </div>   
+            </div>
         </section>
         <section class="content" id="tools-and-skills">
-            <div class="grid grid-cols-2 overflow-hidden pt-[20rem]">
+            <div class="grid grid-cols-2 overflow-hidden">
                 <div id="tas-description" class="w-full flex items-baseline justify-center">
                     <div>
                         <h1 class="text-[2rem] font-bold">Tech Stack and Tools</h1>
@@ -200,9 +268,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="w-full h-screen" id="about">
-            About
         </section>
         <section class="content" id="contact">
             Hire me
