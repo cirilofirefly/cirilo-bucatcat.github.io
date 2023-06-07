@@ -10,16 +10,18 @@
 	--font-size: calc(var(--radius) / 10);
 }
 
+@layer base {
+    html {
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 .dark {
     @apply text-zinc-50;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif, Arial;
 }
 
 .loader {
@@ -72,7 +74,7 @@ main {
 
 .nav-bar ul li a,
 .m-nav-bar ul li a {
-    @apply font-['Poppins'] text-slate-900 font-semibold text-[1.5rem] mr-[5rem] transition-all duration-300 ease-in tracking-wide
+    @apply text-slate-900 font-semibold text-[1.5rem] mr-[5rem] transition-all duration-300 ease-in tracking-wide
         md:text-[0.875rem] md:mr-0
         sm:mr-[10rem] sm:text-[2rem]
         hover:font-bold hover:text-slate-600 hover:transition-all 

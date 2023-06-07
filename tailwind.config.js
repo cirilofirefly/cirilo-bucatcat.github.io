@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
+    mode: 'jit',
     darkMode: 'class',
     content: [
         './src/**/*.html',
@@ -19,6 +22,10 @@ module.exports = {
                 'meow-spin': 'meow-spin 5s linear infinite',
                 'theme-spin': 'meow-spin 100ms linear forwards',
             },
+            fontFamily: {
+                'sans': ['Montserrat', ...defaultTheme.fontFamily.sans],
+            },
+            
             keyframes: {
                 'meow-spin': {
                     '0%': { transform: 'rotate(0deg)' },

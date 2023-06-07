@@ -2,7 +2,7 @@
 const btnThemes = document.querySelectorAll('.btn-theme');
 const btnNavToggle = document.querySelector('.btn-nav-toggle');
 const mobileNavbar = document.querySelector('.m-nav-bar');
-
+const contactForm = document.getElementById('contact-form');
 
 gsap.from('#tas-content', { x: 500, opacity: 0, duration: 1 })
 gsap.to('#tas-content', {
@@ -27,10 +27,13 @@ gsap.to('#tas-description', {
     duration: 1
 })
 
-
 let navTimeline = gsap.timeline({defaults: {ease: 'circ.out' }});
 
 btnNavToggle.addEventListener('click', toggleNav);
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    sendEmail();
+});
 
 window.addEventListener('load', function() {
     getThemeMode();
@@ -39,6 +42,22 @@ window.addEventListener('load', function() {
         animateHeroContent();
     }, 1000);
 });
+
+function sendEmail() {
+    let templateParams = {
+        to_name: 'Cirilo Bucatcat Jr.',
+        from_name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    }
+
+    emailjs.send('service_mv72n9a', 'template_9b91lja', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+            console.log('FAILED...', error);
+        });
+}
 
 function animateIAMText() {
     let timeline = gsap.timeline({defaults: {ease: 'power2' }});
@@ -135,29 +154,6 @@ function toTopPage() {
 }
 
 function toggleNav() {
-    // mobileNavbar.classList.toggle('show-nav-toggle');
-    // let showToggle = mobileNavbar.classList.contains('show-nav-toggle');
-    // let icon = showToggle ? 'xmark' : 'bars';
-    
-    // if(showToggle) {
-    //     if(navTimeline.reversed()) {
-    //         navTimeline.play();
-    //     } else {
-    //         navTimeline
-    //             .from('.m-nav-bar', { duration: 0.3, x: -100, opacity: 0 })
-    //             .to('.m-nav-bar', { duration: 0.3, x: 0, opacity: 1 })
-    //             .from('#nav-item', { duration: 0.3, y: -100, opacity: 0, stagger: 0.5 })
-    //             .to('#nav-item', { duration: 0.3, y: 0, opacity: 1 });
-    //     }
-    // } else {
-    //     navTimeline.reverse();
-    // } 
-    
-    // btnNavToggle.innerHTML = getToggleIcon(icon);
-    // btnNavToggle.classList.add('animate-theme-spin');
-    // setTimeout(() => {
-    //     btnNavToggle.classList.remove('animate-theme-spin'); 
-    // }, 1000);
 
     let hasToggle = mobileNavbar.classList.contains('show-nav-toggle');
     let icon = '';
