@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
     mode: 'jit',
     darkMode: 'class',
@@ -10,6 +11,13 @@ module.exports = {
         './index.html',
     ],
     theme: {
+        colors: {
+            primary: '#E45826',
+            secondary: '#E6D5B8',
+            tertiary: '#F0A500',
+            quaternary: '#1B1A17',
+            white: '#f4f4f4'
+        },
         screens: {
             'sm': '640px',
             'md': '768px',
@@ -18,20 +26,18 @@ module.exports = {
             '2xl': '1536px'
         },
         extend: {
-            animation: {
-                'meow-spin': 'meow-spin 5s linear infinite',
-                'theme-spin': 'meow-spin 100ms linear forwards',
-            },
             fontFamily: {
                 'sans': ['Montserrat', ...defaultTheme.fontFamily.sans],
             },
-            
+            animation: {
+                'text-shine': 'textShine 3s linear infinite'
+            },
             keyframes: {
-                'meow-spin': {
-                    '0%': { transform: 'rotate(0deg)' },
-                    '100%': { transform: 'rotate(360deg)' },
+                textShine: {
+                    '0%' : { backgroundPosition: '0% 50%' },
+                    '100%' : { backgroundPosition: '100% 50%' }
                 }
-              }
+            }
         },
     },
     plugins: [],
