@@ -37,6 +37,10 @@ module.exports = {
                     '0%' : { backgroundPosition: '0% 50%' },
                     '100%' : { backgroundPosition: '100% 50%' }
                 }
+            },
+            sepia: {
+                25: '.25',
+                75: '.75',
             }
         },
     },
