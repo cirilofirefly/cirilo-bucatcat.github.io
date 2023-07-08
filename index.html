@@ -16,7 +16,7 @@
 </head>
 
 <body class="bg-quaternary">
-    <nav class="md:px-[10rem] z-20 sticky top-0 w-full flex items-center justify-between py-[2rem]">
+    <nav class="flex md:px-[10rem] z-20 sticky top-0 w-full items-center justify-between py-[2rem]">
         <a href="/" class="uppercase text-primary font-extrabold text-[20px]">Cirilo B.</a>
         <ul class="flex items-center justify-center space-x-10">
             <li>
@@ -45,21 +45,24 @@
             </li>
         </ul>
     </nav>
-    <main class="md:px-[10rem]">
+    <main class="px-0 sm:px-[3rem] md:px-[5rem] xl:px-[10rem]">
         <section id="home" class="relative flex justify-center">
-            <div class="w-[70%] text-center flex flex-col items-center justify-center mt-[10rem] mb-[10rem] space-y-5">
-                <h2 class="text-[32px] text-secondary font-bold tracking-wider">Hola! I am
+            <div
+                class="w-[70%] md:w-full lg:w-[70%] text-center flex flex-col items-center justify-center mt-[10rem] mb-[10rem] space-y-2 md:space-y-5">
+                <h2 class="text-[1rem] md:text-[1.5rem] lg:text-[2rem] text-secondary font-bold tracking-wider">
+                    Hola! I am
+                    <br class="block sm:hidden">
                     <span class="text-primary font-extrabold tracking-normal">Cirilo Bucatcat Jr.</span>
                 </h2>
-                <h1 class="text-[32px] text-tertiary font-bold uppercase">
-                    A dedicated <span class="text-shine animate-text-shine">software
-                        developer</span>
+                <a class="text-[1rem] md:text-[1.5rem] lg:text-[2rem] text-tertiary font-bold uppercase">
+                    A dedicated
+                    <span class="text-shine animate-text-shine">software developer</span>
                     passionate
                     about
                     creating efficient
                     and user-friendly
                     solutions to meet the ever-evolving needs of the digital world.
-                </h1>
+                </a>
                 <a href="https://drive.google.com/file/d/1tS7QPvJ16PrFBHckxLk1sHae-dlzP6NX" target="_blank"
                     class="fancy-button">
                     <span class="text-secondary text-[16px] font-bold tracking-wider">
@@ -76,190 +79,133 @@
         <section id="projects" class="flex flex-col justify-center">
             <div class="mt-[10rem] mb-[2rem] text-center">
                 <h3 class="text-tertiary text-[28px] font-bold tracking-wide">Projects</h3>
-                <p class="text-secondary text-[16px] font-bold">These are my created projects.</p>
+                <p class="text-secondary text-[16px] font-medium">These are my created projects.</p>
             </div>
-            <div class="w-full min-h-[25rem] flex flex-col justify-center items-center shadow-xl rounded-lg mt-[3rem]">
-                <div class="w-full h-[290px] bg-secondary rounded-t-lg">
-                    <img class="object-cover" src="https://picsum.photos/290" alt="...">
-                </div>
-                <div class="flex justify-evenly rounded-b-lg">
-                    <div class="text-secondary p-4">
-                        <h3 class="text-[24px] font-bold tracking-wide mb-2">Poject Title Here</h3>
-                        <p class="text-[16px] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Totam error,
-                            consequatur aspernatur
-                            assumenda, tempora velit ipsa saepe reiciendis earum possimus minima est atque vero. Vero
-                            blanditiis dignissimos rerum a sint, expedita dolorum vitae molestias excepturi facere nobis
-                            eius reprehenderit distinctio vel voluptate nesciunt aliquam totam esse hic. Sit, ducimus
-                            iste?</p>
-                    </div>
-                    <div class="flex justify-center items-center space-x-5 px-[5rem]">
-                        <a href=""
-                            class="w-[55px] flex items-center justify-center h-[55px] border-2 border-primary rounded-full">
-                            <i class="fab fa-github text-secondary text-[28px]"></i>
-                        </a>
-                        <a href=""
-                            class="w-[55px] flex items-center justify-center h-[55px] border-2 border-primary rounded-full">
-                            <i class="fab fa-github text-secondary text-[28px]"></i>
-                        </a>
-                        <a href=""
-                            class="w-[55px] flex items-center justify-center h-[55px] border-2 border-primary rounded-full">
-                            <i class="fab fa-github text-secondary text-[28px]"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full min-h-[25rem] flex flex-col justify-center items-center shadow-xl rounded-lg mt-[3rem]">
-                <div class="w-full h-[290px] bg-secondary rounded-t-lg">
-                    <img class="object-cover" src="https://picsum.photos/290" alt="...">
-                </div>
-                <div class="flex justify-evenly rounded-b-lg">
-                    <div class="text-secondary p-4">
-                        <h3 class="text-[24px] font-bold tracking-wide mb-2">Poject Title Here</h3>
-                        <p class="text-[16px] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Totam error,
-                            consequatur aspernatur
-                            assumenda, tempora velit ipsa saepe reiciendis earum possimus minima est atque vero. Vero
-                            blanditiis dignissimos rerum a sint, expedita dolorum vitae molestias excepturi facere nobis
-                            eius reprehenderit distinctio vel voluptate nesciunt aliquam totam esse hic. Sit, ducimus
-                            iste?</p>
-                    </div>
-                    <div class="flex justify-center items-center space-x-5 px-[5rem]">
-                        <a href=""
-                            class="w-[55px] flex items-center justify-center h-[55px] border-2 border-primary rounded-full">
-                            <i class="fab fa-github text-secondary text-[28px]"></i>
-                        </a>
-                        <a href=""
-                            class="w-[55px] flex items-center justify-center h-[55px] border-2 border-primary rounded-full">
-                            <i class="fab fa-github text-secondary text-[28px]"></i>
-                        </a>
-                        <a href=""
-                            class="w-[55px] flex items-center justify-center h-[55px] border-2 border-primary rounded-full">
-                            <i class="fab fa-github text-secondary text-[28px]"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full min-h-[25rem] flex flex-col justify-center items-center shadow-xl rounded-lg my-[3rem]">
-                <div class="w-full h-[290px] bg-secondary rounded-t-lg">
-                    <img class="object-cover" src="https://picsum.photos/290" alt="...">
-                </div>
-                <div class="flex justify-evenly rounded-b-lg">
-                    <div class="text-secondary p-4">
-                        <h3 class="text-[24px] font-bold tracking-wide mb-2">Poject Title Here</h3>
-                        <p class="text-[16px] font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Totam error,
-                            consequatur aspernatur
-                            assumenda, tempora velit ipsa saepe reiciendis earum possimus minima est atque vero. Vero
-                            blanditiis dignissimos rerum a sint, expedita dolorum vitae molestias excepturi facere nobis
-                            eius reprehenderit distinctio vel voluptate nesciunt aliquam totam esse hic. Sit, ducimus
-                            iste?</p>
-                    </div>
-                    <div class="flex justify-center items-center space-x-5 px-[5rem]">
-                        <a href=""
-                            class="w-[55px] flex items-center justify-center h-[55px] border-2 border-primary rounded-full">
-                            <i class="fab fa-github text-secondary text-[28px]"></i>
-                        </a>
-                        <a href=""
-                            class="w-[55px] flex items-center justify-center h-[55px] border-2 border-primary rounded-full">
-                            <i class="fab fa-github text-secondary text-[28px]"></i>
-                        </a>
-                        <a href=""
-                            class="w-[55px] flex items-center justify-center h-[55px] border-2 border-primary rounded-full">
-                            <i class="fab fa-github text-secondary text-[28px]"></i>
-                        </a>
+            <div
+                class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10 px-4">
+                <div class="w-full flex flex-col justify-between bg-quaternary shadow-lg text-secondary">
+                    <img class="w-full h-1/2 object-cover" src="./src/assets/images/Invalid Credentials.png" alt="...">
+                    <div class="h-1/2 flex flex-col items-center justify-between">
+                        <div class="text-secondary p-4">
+                            <h3 class="text-[1rem] md:text-[1rem] lg:text-[1.5rem] font-bold tracking-wide mb-2">
+                                Poject Title Here
+                            </h3>
+                            <p class="text-[0.8rem] md:text-[0.8rem] lg:text-[1rem] font-medium line-clamp-6">
+                                Lorem ipsum dolor sit amet consectetur adipisi
+                            </p>
+                        </div>
+                        <div class="self-start md:self-center flex justify-center items-center space-x-5 mb-6 ml-4">
+                            <a href=""
+                                class="w-[3rem] h-[3rem] md:w-[48px] md:h-[48px] lg:w-[55px] lg:h-[55px] flex items-center justify-center border-2 border-primary rounded-full">
+                                <i
+                                    class="fab fa-github text-secondary  text-[1.5rem] md:text-[24px] lg:text-[28px]"></i>
+                            </a>
+                            <a href=""
+                                class="w-[3rem] h-[3rem] md:w-[48px] md:h-[48px] lg:w-[55px] lg:h-[55px] flex items-center justify-center border-2 border-primary rounded-full">
+                                <i
+                                    class="fab fa-github text-secondary  text-[1.5rem] md:text-[24px] lg:text-[28px]"></i>
+                            </a>
+                            <a href=""
+                                class="w-[3rem] h-[3rem] md:w-[48px] md:h-[48px] lg:w-[55px] lg:h-[55px] flex items-center justify-center border-2 border-primary rounded-full">
+                                <i
+                                    class="fab fa-github text-secondary  text-[1.5rem] md:text-[24px] lg:text-[28px]"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="techstack">
             <div class="pt-[5rem] mb-[5rem] text-center">
-                <h3 class="text-tertiary text-[28px] font-bold tracking-wide">Tech Stack</h3>
-                <p class="text-secondary text-[16px] font-bold">Here is my tech stack that I have learned.</p>
+                <h3 class="text-tertiary text-[1.5rem] md:text-[1.75rem] font-bold tracking-wide">Tech Stack</h3>
+                <p class="text-secondary text-[0.8rem] md:text-[1rem] font-medium">Here is my tech stack that I have
+                    learned.</p>
             </div>
-            <div class="grid grid-cols-5 place-items-center gap-[35px]">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+            <div class="grid grid-cols-3 md:grid-cols-5 place-items-center gap-5 md:gap-[2.1rem] px-4 md:px-0">
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/angular.svg" alt="angular">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/laravel.svg" alt="laravel">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/typescript.svg" alt="typescript">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/nodejs.svg" alt="nodejs">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/php.svg" alt="php">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/vuejs.svg" alt="vuejs">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/javascript.svg" alt="javascript">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/mysql.svg" alt="mysql">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/gitlab.svg" alt="gitlab">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/jira.svg" alt="jira">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/html5.svg" alt="html5">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/css3.svg" alt="css3">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/sass.svg" alt="sass">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/docker.svg" alt="docker">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/ubuntu.svg" alt="ubuntu">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/aws.svg" alt="aws">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/digitalocean.svg" alt="digitalocean">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/linux.svg" alt="linux">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/vscode.svg" alt="vscode">
-                <img class="w-[80px] sepia-[.75] hover:sepia-0 transition-all duration-500"
+                <img class="w-[3rem] md:w-[5rem] sepia-[.75] hover:sepia-0 transition-all duration-500"
                     src="./src/assets/icons/tailwindcss.svg" alt="tailwindcss">
             </div>
         </section>
-        <section id="contact" class="flex justify-between w-full mb-[3rem]">
-            <div class="mt-[10rem] text-start">
-                <h3 class="text-tertiary text-[28px] font-bold tracking-wide">GET IN TOUCH</h3>
-                <p class="text-secondary text-[16px] font-bold">Have an idea? Let’s talk about it.</p>
+        <section id="contact" class="flex flex-col justify-between w-full mb-[3rem] md:flex-row">
+            <div class="mt-[10rem] flex flex-col text-center md:text-start">
+                <h3 class="text-tertiary text-[1.5rem] md:text-[1.75rem] font-bold tracking-wide">GET IN TOUCH</h3>
+                <p class="text-secondary text-[0.8rem] md:text-[1rem] font-medium">Have an idea? Let’s talk about it.
+                </p>
 
-                <div class="flex items-center text-secondary space-y-2 space-x-3 mt-[2rem]">
-                    <i class="text-base fas fa-envelope"></i>
-                    <a href="mailto:bucatcat1999@gmail.com" class="text-base">bucatcat1999@gmail.com</a>
-                </div>
-                <div class="flex items-center text-secondary space-y-2 space-x-3">
-                    <i class="text-base fas fa-phone"></i>
-                    <a href="tel:+639264570921" class="text-base">+63926 - 457 - 0921</a>
-                </div>
+                <a href="mailto:bucatcat1999@gmail.com" class="text-base text-secondary mt-[2rem]">
+                    <i class="fas fa-envelope"></i>
+                    bucatcat1999@gmail.com
+                </a>
+                <a href="tel:+639264570921" class="text-base text-secondary">
+                    <i class="fas fa-phone"></i>
+                    +63926 - 457 - 0921
+                </a>
             </div>
             <form id="contactForm"
-                class="mt-[10rem] px-[4rem] flex flex-col justify-start items-start w-[50%] space-y-5">
+                class="mt-[5rem] md:mt-[10rem] px-10 md:px-[4rem] flex flex-col justify-start items-start w-full md:w-[50%] space-y-5">
                 <div class="w-full flex flex-col space-y-2">
-                    <label for="name" class="text-secondary font-semibold text-[16px]">Full Name</label>
+                    <label for="name" class="text-secondary font-semibold text-[0.9rem] md:text-[1rem]">
+                        Full Name</label>
                     <input placeholder="John Doe" type="text" required
-                        class="outline-none px-2 pt-1 pb-3 text-[16px] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary">
+                        class="outline-none px-2 pt-1 pb-3 text-[0.9rem] md:text-[1rem] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary">
                 </div>
                 <div class="w-full flex flex-col space-y-2">
-                    <label for="name" class="text-secondary font-semibold text-[16px]">Email</label>
+                    <label for="name" class="text-secondary font-semibold text-[0.9rem] md:text-[1rem]">Email</label>
                     <input placeholder="john.doe@gmail.com" type="email" required autocomplete
-                        class="outline-none px-2 pt-1 pb-3 text-[16px] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary">
+                        class="outline-none px-2 pt-1 pb-3 text-[0.9rem] md:text-[1rem] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary">
                 </div>
                 <div class="w-full flex flex-col space-y-2">
-                    <label for="name" class="text-secondary font-semibold text-[16px]">Subject</label>
+                    <label for="name" class="text-secondary font-semibold text-[0.9rem] md:text-[1rem]">Subject</label>
                     <input placeholder="Tell me what topic is all about" type="text" required
-                        class="outline-none px-2 pt-1 pb-3 text-[16px] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary">
+                        class="outline-none px-2 pt-1 pb-3 text-[0.9rem] md:text-[1rem] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary">
                 </div>
                 <div class="w-full flex flex-col space-y-2">
-                    <label for="name" class="text-secondary font-semibold text-[16px]">Message</label>
+                    <label for="name" class="text-secondary font-semibold text-[0.9rem] md:text-[1rem]">Message</label>
                     <textarea placeholder="Your message" type="text" required
-                        class="outline-none h-[10rem] resize-none px-2 pt-1 pb-3 text-[16px] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary"></textarea>
+                        class="outline-none h-[10rem] resize-none px-2 pt-1 pb-3 text-[0.9rem] md:text-[1rem] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary"></textarea>
                 </div>
-                <p class="text-tertiary uppercase tracking-wider font-bold"><i
-                        class="mx-2 fas fa-exclamation-circle"></i>Please do
-                    not enter
-                    sensitive data!</p>
+                <p class="text-tertiary uppercase tracking-wider font-bold">
+                    <i class="mx-2 fas fa-exclamation-circle"></i>
+                    <span class="text-[0.9rem] md:text-base">Please do not enter sensitive data!</span>
+                </p>
                 <button
                     class="self-end inline-flex justify-center items-center space-x-5 text-secondary hover:text-white transition-all duration-500 rounded-full border-2  border-primary px-10 py-2">
                     <i class="fas fa-paper-plane"></i>
