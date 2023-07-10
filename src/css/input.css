@@ -78,6 +78,41 @@ html {
     translate: 0% 0%;
 }
 
+.m-nav {
+    @apply z-10 fixed w-full h-screen flex flex-col justify-center left-[1024px] items-center md:hidden bg-quaternary;
+}
+
+.toggle-nav {
+    animation: toggleNav 300ms normal forwards;
+}
+
+#m-nav-btn {
+    position: relative;
+}
+#m-nav-btn.toggle div:first-child {
+    position: absolute;
+    top: 7px;
+    transform: rotate(-45deg);
+}
+
+#m-nav-btn.toggle div:nth-child(2) {
+    display: none;
+}
+
+#m-nav-btn.toggle div:last-child {
+    transform: rotate(45deg);
+}
+
+@keyframes toggleNav {
+    from {
+        left: 1024px;
+    }
+    to {
+        left: 0;
+        @apply bg-primary;
+    }
+}
+
 @keyframes button-anim-1 {
     to {
         transform: translateX(-25%);

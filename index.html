@@ -16,7 +16,43 @@
 </head>
 
 <body class="bg-quaternary">
-    <nav class="flex md:px-[10rem] z-20 sticky top-0 w-full items-center justify-between py-[2rem]">
+    <div class="z-20 fixed md:hidden top-10 px-8 w-full flex items-center justify-between">
+        <a href="/" id="brand" class="uppercase text-primary font-extrabold text-[20px]">Cirilo B.</a>
+        <div class="space-y-2" role="button" id="m-nav-btn">
+            <div class="w-[2rem] h-[3px] bg-primary"></div>
+            <div class="w-[2rem] h-[3px] bg-primary"></div>
+            <div class="w-[2rem] h-[3px] bg-primary"></div>
+        </div>
+    </div>
+    <nav id="m-nav" class="m-nav">
+        <ul class="w-full flex flex-col items-center justify-center space-y-10">
+            <li>
+                <a class="text-[16px] text-secondary hover:text-white transition-all duration-300 font-semibold tracking-wide"
+                    href="#home">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a class="text-[16px] text-secondary hover:text-white transition-all duration-300 font-semibold tracking-wide"
+                    href="#projects">
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a class="text-[16px] text-secondary hover:text-white transition-all duration-300 font-semibold tracking-wide"
+                    href="#techstack">
+                    Tech Stack
+                </a>
+            </li>
+            <li>
+                <a class="text-[16px] text-secondary hover:text-white transition-all duration-300 font-semibold tracking-wide"
+                    href="#contact">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="hidden md:flex md:px-[10rem] z-20 sticky top-0 w-full items-center justify-between py-[2rem]">
         <a href="/" class="uppercase text-primary font-extrabold text-[20px]">Cirilo B.</a>
         <ul class="flex items-center justify-center space-x-10">
             <li>
