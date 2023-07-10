@@ -31,13 +31,8 @@ module.exports = {
             },
             animation: {
                 'text-shine': 'textShine 3s linear infinite',
-                'nav-enter' : 'navEnter 1s linear paused'
             },
             keyframes: {
-                navEnter: {
-                    from: { left: '1024px' },
-                    to: { left: '0' }
-                },
                 textShine: {
                     '0%' : { backgroundPosition: '0% 50%' },
                     '100%' : { backgroundPosition: '100% 50%' }
