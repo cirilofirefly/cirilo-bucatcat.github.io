@@ -31,11 +31,16 @@ module.exports = {
             },
             animation: {
                 'text-shine': 'textShine 3s linear infinite',
+                'slide-up-down' : 'slideUpDown 1s normal forwards'
             },
             keyframes: {
                 textShine: {
                     '0%' : { backgroundPosition: '0% 50%' },
                     '100%' : { backgroundPosition: '100% 50%' }
+                },
+                slideUpDown: {
+                    from : { top: '-1000px'},
+                    top : { top: '0px'}
                 }
             },
             sepia: {

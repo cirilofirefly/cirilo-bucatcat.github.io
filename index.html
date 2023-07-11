@@ -19,9 +19,9 @@
     <div class="z-20 fixed md:hidden top-10 px-8 w-full flex items-center justify-between">
         <a href="/" id="brand" class="uppercase text-primary font-extrabold text-[20px]">Cirilo B.</a>
         <div class="space-y-2" role="button" id="m-nav-btn">
-            <div class="w-[2rem] h-[3px] bg-primary"></div>
-            <div class="w-[2rem] h-[3px] bg-primary"></div>
-            <div class="w-[2rem] h-[3px] bg-primary"></div>
+            <div class="w-[2rem] h-[3px] rounded-sm transition-transform duration-1000 bg-primary"></div>
+            <div class="w-[2rem] h-[3px] rounded-sm transition-all duration-1000 bg-primary"></div>
+            <div class="w-[2rem] h-[3px] rounded-sm transition-transform duration-1000 bg-primary"></div>
         </div>
     </div>
     <nav id="m-nav" class="m-nav">
@@ -117,34 +117,27 @@
                 <h3 class="text-tertiary text-[28px] font-bold tracking-wide">Projects</h3>
                 <p class="text-secondary text-[16px] font-medium">These are my created projects.</p>
             </div>
+            <!-- <p class="text-center text-secondary opacity-75">Coming soon...</p> -->
             <div
                 class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10 px-4">
                 <div class="w-full flex flex-col justify-between bg-quaternary shadow-lg text-secondary">
-                    <img class="w-full h-1/2 object-cover" src="./src/assets/images/Invalid Credentials.png" alt="...">
+                    <video id="project-video" class="w-full h-full object-cover cursor-pointer group/item" src="./src/assets/videos/url-shortener.mp4#15"></video>
                     <div class="h-1/2 flex flex-col items-center justify-between">
                         <div class="text-secondary p-4">
                             <h3 class="text-[1rem] md:text-[1rem] lg:text-[1.5rem] font-bold tracking-wide mb-2">
-                                Poject Title Here
+                                URL Shortener
                             </h3>
                             <p class="text-[0.8rem] md:text-[0.8rem] lg:text-[1rem] font-medium line-clamp-6">
-                                Lorem ipsum dolor sit amet consectetur adipisi
+                                A simple url shortener using VueJS and Laravel.
                             </p>
                         </div>
                         <div class="self-start md:self-center flex justify-center items-center space-x-5 mb-6 ml-4">
-                            <a href=""
-                                class="w-[3rem] h-[3rem] md:w-[48px] md:h-[48px] lg:w-[55px] lg:h-[55px] flex items-center justify-center border-2 border-primary rounded-full">
-                                <i
-                                    class="fab fa-github text-secondary  text-[1.5rem] md:text-[24px] lg:text-[28px]"></i>
-                            </a>
-                            <a href=""
-                                class="w-[3rem] h-[3rem] md:w-[48px] md:h-[48px] lg:w-[55px] lg:h-[55px] flex items-center justify-center border-2 border-primary rounded-full">
-                                <i
-                                    class="fab fa-github text-secondary  text-[1.5rem] md:text-[24px] lg:text-[28px]"></i>
-                            </a>
-                            <a href=""
-                                class="w-[3rem] h-[3rem] md:w-[48px] md:h-[48px] lg:w-[55px] lg:h-[55px] flex items-center justify-center border-2 border-primary rounded-full">
-                                <i
-                                    class="fab fa-github text-secondary  text-[1.5rem] md:text-[24px] lg:text-[28px]"></i>
+                            <a 
+                                href="https://github.com/cirilofirefly/url-shortener"
+                                target="_blank"
+                                class="w-[3rem] h-[3rem] md:w-[48px] md:h-[48px] lg:w-[55px] lg:h-[55px] flex items-center justify-center border-2 border-primary rounded-full"
+                            >
+                                <i class="fab fa-github text-secondary  text-[1.5rem] md:text-[24px] lg:text-[28px]"></i>
                             </a>
                         </div>
                     </div>
@@ -250,13 +243,16 @@
             </form>
         </section>
     </main>
+    <div id="popup-video" class="fixed top-0 left-0 z-30 w-full h-screen animate-slide-up-down bg-quaternary bg-opacity-50 hidden items-center justify-center overflow-hidden">
+        <video class="w-1/2 h-1/2 aspect-video" src="./src/assets/videos/my-site.mp4" controls muted></video>
+        <button id="close-popup-video" class="absolute right-10 top-10 text-primary transition-colors duration-300 hover:text-secondary text-[5rem]">&times;</button>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"
         integrity="sha512-6mqKySLIMRDqKceAm/h7osEeNmPP9Sgx0/FRKqfkw1hRAZ41UwXZMegFZcpg8LY4/DWrF+H1nN6CVekAew1rpA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript" src="./src/js/app.js"></script>
 </body>
 

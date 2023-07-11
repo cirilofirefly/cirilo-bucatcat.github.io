@@ -96,7 +96,8 @@ html {
 }
 
 #m-nav-btn.toggle div:nth-child(2) {
-    display: none;
+    position: absolute;
+    left: 1024px;
 }
 
 #m-nav-btn.toggle div:last-child {
