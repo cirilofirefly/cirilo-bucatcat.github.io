@@ -8,10 +8,14 @@ const contactForm = document.getElementById('contactForm');
 const successAlert = document.getElementById('success-alert');
 
 const transformHamburger = (isToggled) => {
+    
     const currentColor = isToggled ? 'bg-primary' : 'bg-quaternary';
     const newColor = isToggled ? 'bg-quaternary' : 'bg-primary';
+    const currentBrandColor = currentColor.replace('bg', 'text')
+    const newBrandColor = newColor.replace('bg', 'text')
     const hamburgerLines = document.querySelectorAll('#m-nav-btn div');
-    brand.classList.replace(isToggled ? 'text-primary' : 'text-quaternary', isToggled ? 'text-quaternary' : 'text-primary')
+
+    brand.classList.replace(currentBrandColor, newBrandColor)
     mobileNavBtn.classList.toggle('toggle');
     hamburgerLines.forEach((hamburgerLine) => {
         hamburgerLine.classList.replace(currentColor, newColor)
@@ -54,13 +58,10 @@ contactForm.addEventListener('submit', (e) => {
     sendEmail(templateParams) 
         .then((response) => {
             successAlert.classList.replace('hidden', 'block')
-            Object.keys(templateParams).forEach((key) => {
-                clearElementValue(key)
-            })
+            Object.keys(templateParams).forEach((key) => { clearElementValue(key) })
             setTimeout(() => {
-
                 successAlert.classList.replace('block', 'hidden')
-            }, 3000)
+            }, 2000)
         }, (error) => {
             console.log('FAILED...', error);
         });
