@@ -208,35 +208,63 @@
                     +63926 - 457 - 0921
                 </a>
             </div>
-            <form id="contactForm"
-                class="mt-[5rem] md:mt-[10rem] px-10 md:px-0 xl:px-[4rem] flex flex-col justify-start items-start w-full md:w-[50%] space-y-5">
-                <div class="w-full flex flex-col space-y-2">
-                    <label for="name" class="text-secondary font-semibold text-[0.9rem] md:text-[1rem]">
-                        Full Name</label>
-                    <input placeholder="John Doe" type="text" required
-                        class="outline-none px-2 pt-1 pb-3 text-[0.9rem] md:text-[1rem] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary">
+            <form 
+                action="" 
+                id="contactForm"
+                class="mt-[5rem] md:mt-[10rem] px-10 md:px-0 xl:px-[4rem] flex flex-col justify-start items-start w-full md:w-[50%] space-y-5"
+            >
+                <div id="success-alert" class="w-full hidden bg-secondary text-primary">
+                    <h1><i class="fas fa-check-circle"></i> Form submitted</h1>
                 </div>
                 <div class="w-full flex flex-col space-y-2">
-                    <label for="name" class="text-secondary font-semibold text-[0.9rem] md:text-[1rem]">Email</label>
-                    <input placeholder="john.doe@gmail.com" type="email" required autocomplete
-                        class="outline-none px-2 pt-1 pb-3 text-[0.9rem] md:text-[1rem] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary">
+                    <label for="name" class="text-secondary font-semibold text-[0.9rem] md:text-[1rem]">Full Name</label>
+                    <input 
+                        id="name" 
+                        placeholder="John Doe" 
+                        type="text" 
+                        required
+                        class="outline-none px-2 pt-1 pb-3 text-[0.9rem] md:text-[1rem] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary"
+                    >
                 </div>
                 <div class="w-full flex flex-col space-y-2">
-                    <label for="name" class="text-secondary font-semibold text-[0.9rem] md:text-[1rem]">Subject</label>
-                    <input placeholder="Tell me what topic is all about" type="text" required
-                        class="outline-none px-2 pt-1 pb-3 text-[0.9rem] md:text-[1rem] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary">
+                    <label for="email" class="text-secondary font-semibold text-[0.9rem] md:text-[1rem]">Email</label>
+                    <input 
+                        id="email" 
+                        placeholder="john.doe@gmail.com" 
+                        type="email" 
+                        required 
+                        autocomplete
+                        class="outline-none px-2 pt-1 pb-3 text-[0.9rem] md:text-[1rem] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary"
+                    >
                 </div>
                 <div class="w-full flex flex-col space-y-2">
-                    <label for="name" class="text-secondary font-semibold text-[0.9rem] md:text-[1rem]">Message</label>
-                    <textarea placeholder="Your message" type="text" required
-                        class="outline-none h-[10rem] resize-none px-2 pt-1 pb-3 text-[0.9rem] md:text-[1rem] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary"></textarea>
+                    <label for="subject" class="text-secondary font-semibold text-[0.9rem] md:text-[1rem]">Subject</label>
+                    <input
+                        id="subject" 
+                        placeholder="Tell me what topic is all about" 
+                        type="text" 
+                        required
+                        class="outline-none px-2 pt-1 pb-3 text-[0.9rem] md:text-[1rem] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary"
+                    >
+                </div>
+                <div class="w-full flex flex-col space-y-2">
+                    <label for="message" class="text-secondary font-semibold text-[0.9rem] md:text-[1rem]">Message</label>
+                    <textarea
+                        id="message" 
+                        placeholder="Your message" 
+                        type="text" 
+                        required
+                        class="outline-none h-[10rem] resize-none px-2 pt-1 pb-3 text-[0.9rem] md:text-[1rem] font-medium placeholder:text-secondary placeholder:opacity-75 bg-quaternary text-secondary border-b-[3px] border-secondary"
+                    ></textarea>
                 </div>
                 <p class="text-tertiary uppercase tracking-wider font-bold">
                     <i class="mx-2 fas fa-exclamation-circle"></i>
                     <span class="text-[0.9rem] md:text-base">Please do not enter sensitive data!</span>
                 </p>
                 <button
-                    class="self-end inline-flex justify-center items-center space-x-5 text-secondary hover:text-white transition-all duration-500 rounded-full border-2  border-primary px-10 py-2">
+                    type="submit"
+                    class="self-end inline-flex justify-center items-center space-x-5 text-secondary hover:text-white transition-all duration-500 rounded-full border-2  border-primary px-10 py-2"
+                >
                     <i class="fas fa-paper-plane"></i>
                     <p>Send</p>
                 </button>
@@ -244,7 +272,7 @@
         </section>
     </main>
     <div id="popup-video" class="fixed top-0 left-0 z-30 w-full h-screen animate-slide-up-down bg-quaternary bg-opacity-50 hidden items-center justify-center overflow-hidden">
-        <video class="w-1/2 h-1/2 aspect-video" src="./src/assets/videos/my-site.mp4" controls muted></video>
+        <video class="w-1/2 h-1/2 aspect-video" src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" controls muted></video>
         <button id="close-popup-video" class="absolute right-10 top-10 text-primary transition-colors duration-300 hover:text-secondary text-[5rem]">&times;</button>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
