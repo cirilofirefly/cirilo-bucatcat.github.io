@@ -11,6 +11,7 @@ const transformHamburger = (isToggled) => {
 
     const currentColor = isToggled ? 'bg-primary' : 'bg-quaternary';
     const newColor = isToggled ? 'bg-quaternary' : 'bg-primary';
+    
     const currentBrandColor = currentColor.replace('bg', 'text')
     const newBrandColor = newColor.replace('bg', 'text')
     const hamburgerLines = document.querySelectorAll('#m-nav-btn div');
@@ -30,7 +31,7 @@ const sendEmail = (templateParams) => {
 const toggleVideo = (index) => {
     let projectVideo = document.querySelector(`video[data-project-index="${index}"]`)
     if(projectVideo) {
-        
+
         let popupVideo = document.getElementById('popup-video');
         let projectVideoSource = projectVideo.getAttribute('src');
 

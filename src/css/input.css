@@ -89,15 +89,15 @@ html {
 #m-nav-btn {
     position: relative;
 }
+
 #m-nav-btn.toggle div:first-child {
     position: absolute;
-    top: 7px;
-    transform: rotate(-45deg);
+    left: 1024px;
 }
 
 #m-nav-btn.toggle div:nth-child(2) {
     position: absolute;
-    left: 1024px;
+    transform: rotate(-45deg);
 }
 
 #m-nav-btn.toggle div:last-child {
