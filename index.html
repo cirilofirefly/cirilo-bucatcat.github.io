@@ -119,9 +119,22 @@
             </div>
             <!-- <p class="text-center text-secondary opacity-75">Coming soon...</p> -->
             <div
-                class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10 px-4">
+                class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10 px-4 place-items-center">
                 <div class="w-full flex flex-col justify-between bg-quaternary shadow-lg text-secondary">
-                    <video id="project-video" class="w-full h-full object-cover cursor-pointer group/item" src="./src/assets/videos/url-shortener.mp4#15"></video>
+                    <div class="w-full h-full relative group group/item">
+                        <video 
+                            id="project-video" 
+                            class="w-full h-full object-cover cursor-pointer" 
+                            src="./src/assets/videos/url-shortener.mp4#15"
+                            data-project-index="0"
+                        >
+                        </video>
+                        <div class="absolute w-full h-full flex items-center justify-center cursor-pointer bg-quaternary text-secondary bg-opacity-50 invisible top-0 group-hover:visible">
+                            <button onclick="toggleVideo(0)" class="w-[6rem] h-[6rem] rounded-full border-[4px] border-secondary p-4 flex items-center justify-center">
+                                <i class="fas fa-play text-[3rem]"></i>
+                            </button>
+                        </div>
+                    </div>
                     <div class="h-1/2 flex flex-col items-center justify-between">
                         <div class="text-secondary p-4">
                             <h3 class="text-[1rem] md:text-[1rem] lg:text-[1.5rem] font-bold tracking-wide mb-2">
@@ -272,8 +285,8 @@
         </section>
     </main>
     <div id="popup-video" class="fixed top-0 left-0 z-30 w-full h-screen animate-slide-up-down bg-quaternary bg-opacity-50 hidden items-center justify-center overflow-hidden">
-        <video class="w-1/2 h-1/2 aspect-video" src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" controls muted></video>
-        <button id="close-popup-video" class="absolute right-10 top-10 text-primary transition-colors duration-300 hover:text-secondary text-[5rem]">&times;</button>
+        <video class="w-3/4 h-1/2 lg:w-1/2 lg:h-1/2 aspect-video" autoplay src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" controls muted></video>
+        <button id="close-popup-video" class="absolute right-10 top-10 text-primary transition-colors duration-300 hover:text-secondary text-[3rem] lg:text-[5rem]">&times;</button>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>

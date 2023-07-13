@@ -8,7 +8,7 @@ const contactForm = document.getElementById('contactForm');
 const successAlert = document.getElementById('success-alert');
 
 const transformHamburger = (isToggled) => {
-    
+
     const currentColor = isToggled ? 'bg-primary' : 'bg-quaternary';
     const newColor = isToggled ? 'bg-quaternary' : 'bg-primary';
     const currentBrandColor = currentColor.replace('bg', 'text')
@@ -17,6 +17,7 @@ const transformHamburger = (isToggled) => {
 
     brand.classList.replace(currentBrandColor, newBrandColor)
     mobileNavBtn.classList.toggle('toggle');
+
     hamburgerLines.forEach((hamburgerLine) => {
         hamburgerLine.classList.replace(currentColor, newColor)
     });
@@ -26,19 +27,21 @@ const sendEmail = (templateParams) => {
     return emailjs.send('service_xdygofk','template_egm8gwj', templateParams, 'tlrutdeEOohZQl8YI')
 }
 
+const toggleVideo = (index) => {
+    let projectVideo = document.querySelector(`video[data-project-index="${index}"]`)
+    if(projectVideo) {
+        
+        let popupVideo = document.getElementById('popup-video');
+        let projectVideoSource = projectVideo.getAttribute('src');
+
+        popupVideo.classList.replace('hidden', 'flex');
+        document.querySelector('#popup-video video').src = projectVideoSource.split('#')[0] ?? projectVideoSource;
+    }
+}
+
 mobileNavBtn.addEventListener('click', function() {
     mobileNav.classList.toggle('toggle-nav');
     transformHamburger(mobileNav.classList.contains('toggle-nav'));
-});
-
-
-projectVideos.forEach((projectVideo) => {
-    projectVideo.addEventListener('click', () => {
-        let popupVideo = document.getElementById('popup-video');
-        popupVideo.classList.replace('hidden', 'flex');
-        let projectVideoSource = projectVideo.getAttribute('src');
-        document.querySelector('#popup-video video').src = projectVideoSource.split('#')[0] ?? projectVideoSource;
-    })
 });
 
 closePopUpVideo.addEventListener('click', () => {
@@ -59,6 +62,7 @@ contactForm.addEventListener('submit', (e) => {
         .then((response) => {
             successAlert.classList.replace('hidden', 'block')
             Object.keys(templateParams).forEach((key) => { clearElementValue(key) })
+            
             setTimeout(() => {
                 successAlert.classList.replace('block', 'hidden')
             }, 2000)
