@@ -118,13 +118,12 @@
                 <p class="text-secondary text-[16px] font-medium">These are my created projects.</p>
             </div>
             <!-- <p class="text-center text-secondary opacity-75">Coming soon...</p> -->
-            <div
-                class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10 px-4 place-items-center">
-                <div class="w-full flex flex-col justify-between bg-quaternary shadow-lg text-secondary">
+            <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-10 px-4 place-items-center">
+                <div class="w-full h-full flex flex-col justify-between bg-quaternary shadow-lg text-secondary">
                     <div class="w-full h-full relative group group/item">
                         <video 
                             id="project-video" 
-                            class="w-full h-full object-cover cursor-pointer" 
+                            class="w-full h-fit object-cover cursor-pointer" 
                             src="./src/assets/videos/url-shortener.mp4#15"
                             data-project-index="0"
                         >
@@ -155,6 +154,49 @@
                         </div>
                     </div>
                 </div>
+                <div class="w-full h-full flex flex-col justify-between bg-quaternary shadow-lg text-secondary">
+                    <div class="w-full h-full relative group group/item">
+                        <video 
+                            id="project-video" 
+                            class="w-full h-full object-cover cursor-pointer" 
+                            src="./src/assets/videos/rally-sync.mp4#15"
+                            data-project-index="1"
+                        >
+                        </video>
+                        <div class="absolute w-full h-full flex items-center justify-center cursor-pointer bg-quaternary text-secondary bg-opacity-50 invisible top-0 group-hover:visible">
+                            <button onclick="toggleVideo(1)" class="w-[6rem] h-[6rem] rounded-full border-[4px] border-secondary p-4 flex items-center justify-center">
+                                <i class="fas fa-play text-[3rem]"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="h-1/2 flex flex-col items-center justify-between">
+                        <div class="text-secondary p-4">
+                            <h3 class="text-[1rem] md:text-[1rem] lg:text-[1.5rem] font-bold tracking-wide mb-2">
+                                Rally Sync
+                            </h3>
+                            <p class="text-[0.8rem] md:text-[0.8rem] lg:text-[1rem] font-medium line-clamp-6">
+                                An event management sytem using Typescript, Stripe and Next.js
+                            </p>
+                        </div>
+                        <div class="self-start md:self-center flex justify-center items-center space-x-5 mb-6 ml-4">
+                            <a 
+                                href="https://github.com/cirilofirefly/rally-sync"
+                                target="_blank"
+                                class="w-[3rem] h-[3rem] md:w-[48px] md:h-[48px] lg:w-[55px] lg:h-[55px] flex items-center justify-center border-2 border-primary rounded-full"
+                            >
+                                <i class="fab fa-github text-secondary  text-[1.5rem] md:text-[24px] lg:text-[28px]"></i>
+                            </a>
+                            <a 
+                                href="https://rally-sync.vercel.app/"
+                                target="_blank"
+                                class="w-[3rem] h-[3rem] md:w-[48px] md:h-[48px] lg:w-[55px] lg:h-[55px] flex items-center justify-center border-2 border-primary rounded-full"
+                            >
+                                <i class="fas fa-play text-secondary  text-[1.5rem] md:text-[24px] lg:text-[28px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+               
             </div>
         </section>
         <section id="techstack">
